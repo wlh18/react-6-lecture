@@ -21,7 +21,7 @@ class ProductListContainer extends Component {
         <h1 className="product-list-head">
           {this.props.user ? 'All of our products' : 'Log in to see products'}
         </h1>
-        {this.state.isLoggedIn ? (
+        {this.props.isLoggedIn ? (
           <ProductList />
         ) : (
           <div className="form">
