@@ -34,7 +34,7 @@ const Header = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  return { user: state.user.user, cart: state.cart }
+  return { user: state.user.user, cart: state.cart.cart }
 }
 
 export default connect(mapStateToProps)(Header)

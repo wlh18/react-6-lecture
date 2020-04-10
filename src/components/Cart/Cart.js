@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './cart.css'
 
 class Cart extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="container">
         <h1 className="cart-title"> YOUR CART </h1>
@@ -22,4 +24,9 @@ class Cart extends Component {
     )
   }
 }
-export default Cart
+
+const mapStateToProps = (state) => {
+  return state
+}
+
+export default connect(mapStateToProps)(Cart)
