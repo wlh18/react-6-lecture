@@ -43,7 +43,7 @@ class ProductListContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return state
+  return state.user
 }
 
 export default connect(mapStateToProps, { loginUser })(ProductListContainer)
