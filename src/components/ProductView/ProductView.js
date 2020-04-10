@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Loading from '../ProductList/Loading'
 import { getProductById } from '../../redux/productsReducer'
 import './productView.css'
 
@@ -21,6 +22,7 @@ class ProductView extends Component {
         <button onClick={() => this.props.history.push('/')}>
           BACK TO PRODUCTS
         </button>
+        {this.props.products.loading && <Loading />}
       </div>
     )
   }

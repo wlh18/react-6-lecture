@@ -36,7 +36,7 @@ export default function (state = initialState, action) {
     case GET_PRODUCTS + '_REJECTED':
       return { ...state, loading: false }
     case GET_PRODUCT_BY_ID + '_PENDING':
-      return { ...state, loading: true }
+      return { ...state, loading: true, product: {} }
     case GET_PRODUCT_BY_ID + '_FULFILLED':
       return { ...state, loading: false, product: action.payload.data }
     case GET_PRODUCT_BY_ID + '_REJECTED':
