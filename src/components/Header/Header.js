@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import './header.css'
 
 const Header = (props) => {
@@ -11,6 +11,7 @@ const Header = (props) => {
             src="https://pngimg.com/uploads/letter_p/letter_p_PNG83.png"
             className="fancy-p"
             alt="P"
+            onClick={() => props.history.push('/')}
           />
           <p>ARTIAL</p>
         </div>
@@ -31,4 +32,4 @@ const Header = (props) => {
     </header>
   )
 }
-export default Header
+export default withRouter(Header)

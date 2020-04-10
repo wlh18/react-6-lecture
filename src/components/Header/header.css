@@ -16,6 +16,7 @@
 .fancy-p {
   height: 35px;
   width: 35px;
+  cursor: pointer;
 }
 
 .first-line-hold > p {
