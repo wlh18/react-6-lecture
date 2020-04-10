@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getProductById } from '../../redux/productsReducer'
 import './productView.css'
 
 class ProductView extends Component {
+  componentDidMount() {
+    this.props.getProductById(this.props.match.params.id)
+  }
+
   render() {
     return (
       <div className="container">
@@ -19,4 +25,9 @@ class ProductView extends Component {
     )
   }
 }
-export default ProductView
+
+const mapStateToProps = (state) => {
+  return state
+}
+
+export default connect(mapStateToProps, { getProductById })(ProductView)
