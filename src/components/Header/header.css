@@ -1,5 +1,5 @@
 .header {
-  width: 100vw;
+  max-width: 100vw;
   height: 15vh;
   background-color: cornflowerblue;
   padding: 10px 10%;

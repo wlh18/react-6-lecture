@@ -131,3 +131,12 @@ table {
 * {
   box-sizing: border-box;
 }
+
+.container {
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 85vh;
+  background-color: navajowhite;
+  padding: 15px;
+  text-align: center;
+}
