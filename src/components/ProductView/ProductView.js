@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Loading from '../ProductList/Loading'
 import './productView.css'
 
 class ProductView extends Component {
