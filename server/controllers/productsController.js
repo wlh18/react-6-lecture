@@ -1,10 +1,11 @@
 const products = require('../products.json')
+const delay = 3500
 
 module.exports = {
   getAllProducts: (req, res) => {
     setTimeout(() => {
       res.status(200).send(products)
-    }, 5000)
+    }, delay)
   },
 
   getProductById: (req, res) => {
@@ -16,6 +17,6 @@ module.exports = {
       } else {
         res.status(404).send('Product not found')
       }
-    }, 5000)
+    }, delay)
   },
 }
