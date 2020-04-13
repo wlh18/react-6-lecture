@@ -35,7 +35,7 @@ const Header = (props) => {
 }
 
 const mapStateToProps = (reduxState) => {
-  return reduxState.user
+  return { ...reduxState.user, ...reduxState.cart }
 }
 
 export default connect(mapStateToProps)(withRouter(Header))
