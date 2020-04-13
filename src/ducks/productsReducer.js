@@ -9,7 +9,6 @@ const initialState = {
 const FETCH_PRODUCTS = 'FETCH_PRODUCTS'
 
 export function fetchProducts() {
-  console.log('Hit')
   const productsPromise = axios.get('/api/products')
 
   return {

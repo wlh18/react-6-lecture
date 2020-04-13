@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Product from './Product'
 import Loading from './Loading'
 import { connect } from 'react-redux'
-import fetchProducts from '../../ducks/productsReducer'
+import { fetchProducts } from '../../ducks/productsReducer'
 import './productList.css'
 
 class ProductList extends Component {
@@ -16,6 +16,7 @@ class ProductList extends Component {
         {this.props.products.map((product) => (
           <Product key={product.id} data={product} />
         ))}
+        {this.props.loading && <Loading />}
       </div>
     )
   }
